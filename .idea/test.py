@@ -1,2 +1,7 @@
-##test test test
-##check check 0001 0010 0011
+import pefile
+
+exe_path = "c:\Windows\System32\calc.exe"
+pe = pefile.PE(exe_path)
+
+for field in pe.DOS_HEADER.dump():
+    print(field)
