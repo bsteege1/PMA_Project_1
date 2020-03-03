@@ -19,17 +19,13 @@ for entry in pe.DIRECTORY_ENTRY_IMPORT:
     print('\t' + entry.dll.decode('utf-8'))
 
 for section in pe.sections:
-    ##print(section.Name.decode('utf-8'))
-    ##print("\tVirtual Address: " + hex(section.VirtualAddress))
-    ##print("\tVirtual Size: " + hex(section.Misc_VirtualSize))
-    ##print("\tRaw Size: " + hex(section.SizeOfRawData))
     if int(section.SizeOfRawData) < 1 :
         packed = True
 
 if packed:
-    print("Likely packed ")
+    print("\nFile is likely packed\n")
 else:
-    print("File does not appear to be packed")
+    print("\nFile does not appear to be packed\n")
 
 os.system("pause")
 
