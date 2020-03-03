@@ -1,6 +1,8 @@
 import pefile
 import datetime
 import time
+import os
+
 
 exe_path = input("Please enter your file path : ")
 pe = pefile.PE(exe_path)
@@ -28,6 +30,8 @@ if packed:
     print("Likely packed ")
 else:
     print("File does not appear to be packed")
+
+os.system("pause")
 
 ### C:\Windows\System32\calc.exe
 ### C:\Program Files\Core Temp\Core Temp.exe
