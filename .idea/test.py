@@ -1,2 +1,38 @@
-##test test test
-##check check 0001 0010 0011
+import pefile
+import os
+import auxiliary
+
+
+directory= input("Please enter your directory: ")
+for filename in os.listdir(directory):
+    if filename.endswith(".exe"):
+        print("\n\n[*] EXE Found: " + filename)
+        fullDirectory = directory + "\\" + filename
+        pe = pefile.PE(fullDirectory)
+
+        #Upload to virustotal
+        auxiliary.virusTotal(pe, fullDirectory)
+
+        #Find compilation time of file
+        auxiliary.timeCompiled(pe)
+
+        #Decide whether file is packed
+        auxiliary.isPacked(pe)
+
+        #List Imported DLLs
+        auxiliary.importedDlls(pe)
+
+        #Find Strings
+        #auxiliary.findStrings(pe)
+
+        for field in pe.DOS_HEADER.dump():
+            print(field)
+else:
+    print("\n[*] Directory contains no untested executables")
+
+
+### C:\Windows\System32\calc.exe
+### C:\Program Files\Core Temp\Core Temp.exe
+### 1b88f1ccceabaa4b8bb643742c0822628f09d2e03fc58374638b73a4c4d1a1a5
+
+### https://axcheron.github.io/pe-format-manipulation-with-pefile/
