@@ -29,6 +29,22 @@ def importedDlls (pe):
     for entry in pe.DIRECTORY_ENTRY_IMPORT:
         print('\t' + entry.dll.decode('utf-8'))
 
+def detectImports(pe):
+    for entry in pe.DIRECTORY_ENTRY_IMPORT:
+        dll_name = entry.dll.decode('utf-8')
+        if dll_name == "kernel32.dll": #MSVCRT.dll Advapi32.dll
+            print("[*] Kernel32.dll imports:")
+            for func in entry.imports:
+                print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
+        elif dll_name == "MSCVRT.dll":
+            print("[*] MSCVRT.dll imports:")
+            for func in entry.imports:
+                print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
+        elif dll_name == "Advapi32.dll":
+            print("[*] Advapi32.dll imports:")
+            for func in entry.imports:
+                print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
+
 def findStrings (pe):
     # The List will contain all the extracted Unicode strings
     #
@@ -52,6 +68,7 @@ def findStrings (pe):
         data_rva = entry.directory.entries[0].data.struct.OffsetToData
         size = entry.directory.entries[0].data.struct.Size
         print('Directory entry at RVA', hex(data_rva), 'of size', hex(size))
+        #print(entry.ResourceDirEntryData.decode('utf-8'))
 
         # Retrieve the actual data and start processing the strings
         #
