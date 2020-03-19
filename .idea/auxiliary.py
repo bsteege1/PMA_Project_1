@@ -33,15 +33,15 @@ def detectImports(pe):
     for entry in pe.DIRECTORY_ENTRY_IMPORT:
         dll_name = entry.dll.decode('utf-8').lower()
         if dll_name == "kernel32.dll":
-            print("[*] Kernel32.dll imports:")
+            print("\n[*] Kernel32.dll imports:")
             for func in entry.imports:
                 print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
         elif dll_name == "mscvrt.dll":
-            print("[*] MSCVRT.dll imports:")
+            print("\n[*] MSCVRT.dll imports:")
             for func in entry.imports:
                 print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
         elif dll_name == "advapi32.dll":
-            print("[*] Advapi32.dll imports:")
+            print("\n[*] Advapi32.dll imports:")
             for func in entry.imports:
                 print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
 

@@ -27,9 +27,6 @@ for filename in os.listdir(directory):
         #Find Strings
         auxiliary.findStrings(pe)
 
-
-        for field in pe.DOS_HEADER.dump():
-            print(field)
 else:
     print("\n[*] Directory contains no untested executables")
 
