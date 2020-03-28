@@ -50,6 +50,9 @@ def detectImports(pe):
                 print("\t%s at 0x%08x" % (func.name.decode('utf-8'), func.address))
 
 def findStrings (pe):
+    # Shows that we are listing strings
+    print("\n[*] Listing Strings...")
+
     # The List will contain all the extracted Unicode strings
     #
     strings = list()

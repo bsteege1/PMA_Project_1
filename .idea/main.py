@@ -24,7 +24,7 @@ for filename in os.listdir(directory):
         auxiliary.detectImports(pe)
 
         #Find Strings
-        #auxiliary.findStrings(pe)
+        auxiliary.findStrings(pe)
 
         answer= input("\nWould you like to change the compile time?\n")
         if(answer =='y'):
