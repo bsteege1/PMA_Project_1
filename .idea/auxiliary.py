@@ -16,9 +16,7 @@ def timeCompiled (pe):
     compileTime = datetime.datetime.fromtimestamp(pe.FILE_HEADER.TimeDateStamp)
     print("\n[*] Compile Time: " + str(compileTime))
 
-def timeChangedCompiled ():
-    changedcompileTime="May 21st 2019 @ 7:03pm"
-    print("\n[*] Compile Time: "+ changedcompileTime)
+
 
 def timeChangedCompiled2():
     # Reference: https://github.com/deptofdefense/SalSA/wiki/PE-File-Format
@@ -74,8 +72,7 @@ def timeChangedCompiled2():
     writeTimeDateStamp("test.exe", bytes.fromhex('dd70455c'))
     getTimeDateStamp("test.exe")
 
-def timeChangedCompiled3():
-    pe = pefile.PE("test.exe")
+def timeChangedCompiled3(pe):
     pe.FILE_HEADER.TimeDateStamp = 1348054607
     pe.write("new.exe")
 
