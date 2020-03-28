@@ -74,7 +74,7 @@ def findStrings (pe):
         #
         data_rva = entry.directory.entries[0].data.struct.OffsetToData
         size = entry.directory.entries[0].data.struct.Size
-        print('Directory entry at RVA', hex(data_rva), 'of size', hex(size))
+        #print('Directory entry at RVA', hex(data_rva), 'of size', hex(size))
         #print(entry.ResourceDirEntryData.decode('utf-8'))
 
         # Retrieve the actual data and start processing the strings
