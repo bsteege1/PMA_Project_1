@@ -72,9 +72,9 @@ def timeChangedCompiled2():
     writeTimeDateStamp("test.exe", bytes.fromhex('dd70455c'))
     getTimeDateStamp("test.exe")
 
-def timeChangedCompiled3(pe):
+def timeChangedCompiled3(pe, fullDirectory):
     pe.FILE_HEADER.TimeDateStamp = 1348054607
-    pe.write("new.exe")
+    pe.write(fullDirectory)
 
 def isPacked (pe):
     packed = False

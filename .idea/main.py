@@ -29,7 +29,7 @@ for filename in os.listdir(directory):
 
         answer= input("Would you like to change the compile time?")
         if(answer=='y'):
-            auxiliary.timeChangedCompiled3(pe)
+            auxiliary.timeChangedCompiled3(pe, fullDirectory)
             auxiliary.timeCompiled(pe)
 
 else:
@@ -41,3 +41,6 @@ else:
 ### 1b88f1ccceabaa4b8bb643742c0822628f09d2e03fc58374638b73a4c4d1a1a5
 
 ### https://axcheron.github.io/pe-format-manipulation-with-pefile/
+
+
+###
