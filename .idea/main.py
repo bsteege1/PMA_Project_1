@@ -25,11 +25,11 @@ for filename in os.listdir(directory):
         auxiliary.detectImports(pe)
 
         #Find Strings
-        auxiliary.findStrings(pe)
+        #auxiliary.findStrings(pe)
 
         answer= input("Would you like to change the compile time?")
         if(answer=='y'):
-            auxiliary.timeChangedCompiled3(pe, fullDirectory)
+            auxiliary.timeChangedCompiled3(pe, filename)
             auxiliary.timeCompiled(pe)
 
 else:
