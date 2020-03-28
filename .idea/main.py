@@ -30,6 +30,7 @@ for filename in os.listdir(directory):
         answer= input("Would you like to change the compile time?")
         if(answer=='y'):
             auxiliary.timeChangedCompiled3(pe)
+            auxiliary.timeCompiled(pe)
 
 else:
     print("\n[*] Directory contains no untested executables")
