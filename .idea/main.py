@@ -5,7 +5,7 @@ import auxiliary
 
 directory= input("Please enter your directory: ")
 for filename in os.listdir(directory):
-    if filename.endswith(".exe"):
+    if filename.endswith(".exe") or filename.endswith(".dll"):
         print("\n\n[*] EXE Found: " + filename)
         fullDirectory = directory + "\\" + filename
         pe = pefile.PE(fullDirectory)
@@ -22,16 +22,16 @@ for filename in os.listdir(directory):
         #List Imported DLLs
         auxiliary.importedDlls(pe)
 
-        #Find Strings
-        #auxiliary.findStrings(pe)
+        auxiliary.detectImports(pe)
 
-        for field in pe.DOS_HEADER.dump():
-            print(field)
+        #Find Strings
+        auxiliary.findStrings(pe)
+
 else:
     print("\n[*] Directory contains no untested executables")
 
 
-### C:\Windows\System32\calc.exe
+### C:\Windows\Syste\calc.exem32
 ### C:\Program Files\Core Temp\Core Temp.exe
 ### 1b88f1ccceabaa4b8bb643742c0822628f09d2e03fc58374638b73a4c4d1a1a5
 
