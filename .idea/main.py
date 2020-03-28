@@ -2,8 +2,7 @@ import pefile
 import os
 import auxiliary
 
-
-directory= input("Please enter your directory: ")
+directory = input("Please enter your directory: ")
 for filename in os.listdir(directory):
     if filename.endswith(".exe") or filename.endswith(".dll"):
         print("\n\n[*] EXE Found: " + filename)
@@ -27,9 +26,10 @@ for filename in os.listdir(directory):
         #Find Strings
         #auxiliary.findStrings(pe)
 
-        answer= input("Would you like to change the compile time?")
-        if(answer=='y'):
-            auxiliary.timeChangedCompiled3(pe, filename)
+        answer= input("\nWould you like to change the compile time?\n")
+        if(answer =='y'):
+            auxiliary.changeCompileTime(pe, directory, filename)
+            print("\n new file with changes created at" + directory + "\\new" + filename + "\n")
             auxiliary.timeCompiled(pe)
 
 else:
