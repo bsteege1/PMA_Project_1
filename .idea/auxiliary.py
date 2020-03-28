@@ -99,6 +99,6 @@ def findStrings (pe):
             ustr = pe.get_string_u_at_rva(data_rva + offset, max_length=ustr_length)
             offset += ustr_length * 2
             strings.append(ustr)
-            print
-            'String of length', ustr_length, 'at offset', offset
-
+            #print
+            #'String of length', ustr_length, 'at offset', offset
+    print(strings)
