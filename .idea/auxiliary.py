@@ -73,7 +73,7 @@ def timeChangedCompiled2():
     getTimeDateStamp("test.exe")
 
 def timeChangedCompiled3(pe, filename):
-    pe.FILE_HEADER.TimeDateStamp = 1348054607
+    pe.FILE_HEADER.TimeDateStamp = 692935320
     pe.write(filename)
 
 def isPacked (pe):
