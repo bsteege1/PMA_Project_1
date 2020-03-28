@@ -14,6 +14,10 @@ def timeCompiled (pe):
     compileTime = datetime.datetime.fromtimestamp(pe.FILE_HEADER.TimeDateStamp)
     print("\n[*] Compile Time: " + str(compileTime))
 
+def timeChangedCompiled ():
+    changedcompileTime="May 21st 2019 @ 7:03pm"
+    print("\n[*] Compile Time: "+ changedcompileTime)
+
 def isPacked (pe):
     packed = False
     for section in pe.sections:

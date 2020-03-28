@@ -27,6 +27,10 @@ for filename in os.listdir(directory):
         #Find Strings
         auxiliary.findStrings(pe)
 
+        answer= input("Would you like to change the compile time?")
+        if(answer=='y'):
+            auxiliary.timeChangedCompiled()
+
 else:
     print("\n[*] Directory contains no untested executables")
 
