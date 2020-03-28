@@ -28,8 +28,7 @@ for filename in os.listdir(directory):
 
         answer= input("\nWould you like to change the compile time?\n")
         if(answer =='y'):
-            auxiliary.changeCompileTime(pe, directory, filename)
-            print("\n new file with changes created at" + directory + "\\new" + filename + "\n")
+            auxiliary.changeCompileTime(pe, filename)
             auxiliary.timeCompiled(pe)
 
 else:

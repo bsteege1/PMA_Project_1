@@ -14,10 +14,9 @@ def timeCompiled (pe):
     compileTime = datetime.datetime.fromtimestamp(pe.FILE_HEADER.TimeDateStamp)
     print("\n[*] Compile Time: " + str(compileTime))
 
-def changeCompileTime(pe, directory, filename):
-    pe.FILE_HEADER.TimeDateStamp = 6929353201
-    newFileDirectory = directory + "\\new" + filename
-    pe.write(newFileDirectory)
+def changeCompileTime(pe, filename):
+    pe.FILE_HEADER.TimeDateStamp = 692935320
+    pe.write("new" + filename)
 
 def isPacked (pe):
     packed = False
