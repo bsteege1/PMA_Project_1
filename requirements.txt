@@ -1,1 +1,6 @@
-
+Libraries needed to run our code:
+pefile
+requests
+datetime
+os
+auxiliary

@@ -31,6 +31,7 @@ for filename in os.listdir(directory):
             auxiliary.changeCompileTime(pe, filename)
             print("\n[*] New Compile Time: " + str(compileTime))
 
+
 else:
     print("\n[*] Directory contains no untested executables")
 
