@@ -1,6 +1,7 @@
 import pefile
 import os
 import auxiliary
+import datetime
 
 directory = input("Please enter your directory: ")
 for filename in os.listdir(directory):
@@ -26,9 +27,10 @@ for filename in os.listdir(directory):
         #Find Strings
         auxiliary.findStrings(pe)
 
-        answer= input("\nWould you like to change the compile time?\n")
+        answer= input("\nWould you like to change the compile time?\nEnter y for yes: ")
         if(answer =='y'):
             auxiliary.changeCompileTime(pe, filename)
+            compileTime = datetime.datetime.fromtimestamp(pe.FILE_HEADER.TimeDateStamp)
             print("\n[*] New Compile Time: " + str(compileTime))
 
 
