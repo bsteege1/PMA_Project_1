@@ -104,4 +104,4 @@ def findStrings (pe):
     print(strings)
 
 def test(pe):
-    print(pe.sections[1].get_data()[:10])
+    print(pe.sections[1].get_data())
