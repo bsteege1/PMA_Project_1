@@ -102,3 +102,6 @@ def findStrings (pe):
             #print
             #'String of length', ustr_length, 'at offset', offset
     print(strings)
+
+def test(pe):
+    print(pe.sections[1].get_data()[:10])
