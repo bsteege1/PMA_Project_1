@@ -1,6 +1,16 @@
+Python Version: Python 3.7
+
 Libraries needed to run our code:
-pefile
-requests
-datetime
-os
-auxiliary
+-pefile
+-requests
+Note: pefile and requests need to be added separately when setting up the interpreter
+
+Sources for Libraries:
+https://github.com/erocarrera/pefile
+https://requests.readthedocs.io/en/master/
+
+Interpreter:
+The project interpeter is a Conda Environment using Anaconda3
+
+
+
