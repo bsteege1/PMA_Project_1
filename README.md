@@ -5,7 +5,10 @@ The purpose of our program is to analyze a directory of files to allow the user 
 
 For the second part of this project, we decided to change the compile time of a given file in the directory that is being searched. If the user decided to change the compile time, a new .exe will be created within the python project directory. This new file will be called new"original filename".exe. This new file still runs and functions the same as the original. This functionality allows the user to directly compare the original and new files side by side. 
 
+
+
 Testing And Outputs
+
 
 Chapter 1 Malware Directory:
 
@@ -289,6 +292,7 @@ Process finished with exit code 0
 
 
 
+
 Malware VM Program Files Directory:
 
 C:\Users\User\Anaconda3\envs\PMA_Project_1\python.exe C:/Users/User/PycharmProjects/PMA_Project_1/.idea/main.py
@@ -297,7 +301,6 @@ Please enter your directory: C:\Program Files
 [*] Directory contains no untested files.
 
 Process finished with exit code 0
-
 
 
 Note: The reason no executables were tested is because our program only analyzes the directory to find executables and .dll files. There is no functionality that allows the sub directories to have their contents analyzed as well. 
