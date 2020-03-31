@@ -106,5 +106,5 @@ def findStrings (pe):
 def test(pe):
     data = str(pe.sections[1].get_data())
 
-    data2 = data.split("x")
+    data3 = data.split("x")
     print(data2)
