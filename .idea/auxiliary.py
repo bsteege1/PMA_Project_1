@@ -104,4 +104,7 @@ def findStrings (pe):
     print(strings)
 
 def test(pe):
-    print(pe.sections[1].get_data())
+    data = str(pe.sections[1].get_data())
+
+    data2 = data.split("x")
+    print(data2)
