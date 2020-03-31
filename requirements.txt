@@ -1,5 +1,7 @@
 Python Version: Python 3.7
 
+IDE: PyCharm Professional Edition with Anaconda Plugin 2019.3.3
+
 Libraries needed to run our code:
 -pefile
 -requests
