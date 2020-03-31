@@ -17,5 +17,6 @@ https://mkyong.com/python/python-how-to-split-a-string/
 https://stackoverflow.com/questions/20027990/how-can-i-get-text-section-from-pe-file-using-pefile/20029088
 https://developers.virustotal.com/reference#file-scan
 https://axcheron.github.io/pe-format-manipulation-with-pefile/
-
+http://hooked-on-mnemonics.blogspot.com/p/portable-executable-virustotal-example.html
+https://stackoverflow.com/questions/54286700/how-to-modify-the-timedatestamp-field-in-pe-file-header
 
