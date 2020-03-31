@@ -106,5 +106,9 @@ def findStrings (pe):
 def test(pe):
     data = str(pe.sections[1].get_data())
 
-    data3 = data.split("x")
-    print(data2)
+    data2 = data.split("\\")
+    for x in data2:
+        if len(x) >=5  :
+            print(x)
+
+    #print(data2)
