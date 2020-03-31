@@ -25,8 +25,7 @@ for filename in os.listdir(directory):
         auxiliary.detectImports(pe)
 
         #Find Strings
-        #auxiliary.findStrings(pe)
-        auxiliary.test(pe)
+        auxiliary.findStrings(pe)
 
         answer= input("\nWould you like to change the compile time?\nEnter y for yes: ")
         if(answer =='y'):
@@ -39,11 +38,5 @@ else:
     print("\n[*] Directory contains no untested executables")
 
 
-### C:\Windows\Syste\calc.exem32
-### C:\Program Files\Core Temp\Core Temp.exe
-### 1b88f1ccceabaa4b8bb643742c0822628f09d2e03fc58374638b73a4c4d1a1a5
 
-### https://axcheron.github.io/pe-format-manipulation-with-pefile/
-
-
-###
+### Virus Total Temporary Key: 1b88f1ccceabaa4b8bb643742c0822628f09d2e03fc58374638b73a4c4d1a1a5
