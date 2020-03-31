@@ -12,5 +12,9 @@ https://requests.readthedocs.io/en/master/
 Interpreter:
 The project interpeter is a Conda Environment using Anaconda3
 
+Sources:
+https://mkyong.com/python/python-how-to-split-a-string/
+https://stackoverflow.com/questions/20027990/how-can-i-get-text-section-from-pe-file-using-pefile/20029088
+
 
 
