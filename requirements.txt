@@ -1,3 +1,7 @@
+Group Members: Brandon Steege, Hannah Tippin, Leonardo Garcia
+
+Group Name: Click here for more ram!!1!
+
 Python Version: Python 3.7
 
 IDE: PyCharm Professional Edition with Anaconda Plugin 2019.3.3
