@@ -1,3 +1,8 @@
+# main.py
+# Authors: Brandon Steege, Hannah Tippin, Leonardo Garcia
+# COSC 4010
+# 3 Apr 2020
+
 import pefile
 import os
 import auxiliary
