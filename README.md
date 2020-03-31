@@ -2,6 +2,7 @@
 COSC 4010 Binary Analysis Project 1
 
 Group Members: Brandon Steege, Hannah Tippin, Leonardo Garcia
+
 Group Name: Click here for more ram!!1!
 
 The purpose of our program is to analyze a directory of files to allow the user to potentially determine if the given files are malware. Our code goes through each .exe or .dll file in a given directory and looks for strings, lists imports, checks if the file is packed, runs the file through VirusTotal, and gets the compile time. 
