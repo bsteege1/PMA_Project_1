@@ -11,7 +11,7 @@ import datetime
 directory = input("Please enter your directory: ")
 for filename in os.listdir(directory):
     if filename.endswith(".exe") or filename.endswith(".dll"):
-        print("\n\n[*] EXE Found: " + filename)
+        print("\n\n[*] File Found: " + filename)
         fullDirectory = directory + "\\" + filename
         pe = pefile.PE(fullDirectory)
 
@@ -40,7 +40,7 @@ for filename in os.listdir(directory):
 
 
 else:
-    print("\n[*] Directory contains no untested executables")
+    print("\n[*] Directory contains no untested files.")
 
 
 
